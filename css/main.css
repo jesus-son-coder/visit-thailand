@@ -1,0 +1,337 @@
+﻿/* GRAPHISME GENERAL */
+
+html {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: rgb(71, 73, 75);
+}
+
+body {
+    background-color: rgb(249, 249, 249);
+}
+
+a{
+    color: rgb(169, 209, 206);
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* POSITIONNEMENT ET GRAPHISME PARTICULIER */
+
+img {
+    vertical-align: middle;
+}
+
+.clearfix:before, 
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both; 
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    padding: 45px 0;
+    background-color:white;
+}
+
+#header-brand {
+    float: left;
+}
+
+#header-logo, 
+#header-title {
+    margin: 0;
+    float:left;
+}
+
+
+#header-title {
+    margin-left: 15px;
+    font-size: 1.2em;
+    line-height: 1;
+    text-align: center;
+}
+
+#header-nav {
+    float: right;
+}
+
+#header-title>a>strong {
+    text-transform: uppercase;
+    font-size: 1.6em;
+}
+
+
+#header-nav-list {
+    text-transform: uppercase;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+#header-nav-list>li {
+    padding: 15px;
+    float: left;
+    border-left: 1px solid rgb(239, 239, 239);
+
+}
+
+#header-nav-list>li:first-child {
+    border-left:none;
+}
+
+
+#slogan {
+    width: 100%;
+    height: 80px; /* => 250px - (85px x 2) = 80px */
+    padding: 85px 0;
+    background: url(../img/slogan-background.png) repeat rgb(181, 212, 214);
+}
+
+#slogan-title {
+    margin:0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.3em;
+    line-height: 1.2;
+    font-weight: normal;
+
+}
+
+#slogan-title strong {
+    font-size: 1.3em; 
+    /* la taille en 'em' est relative à la taille déjà en cours 
+        (cad la taille parent, en l'occurrence, la taille parent est : 2.3em */
+}
+
+
+#content {
+    margin-top: 20px;
+    margin-bottom:20px;
+    /* on ne définit pas les margin-left et right ici,
+        afin qu'elles héritent des propriétés du parent (classe 'wrapper')
+        qui les a déjà centré sur le page (margin : auto)
+    */
+}
+
+.topic {
+    width: 310px;
+    margin: 0 5px;
+    float: left;
+}
+
+.topic-picture {
+    margin: 0;
+}
+
+
+.topic-content {
+    padding: 30px;
+    background-color: white;
+}
+
+.topic-icon {
+    margin: 10px 0;
+    float: left;
+}
+
+.topic-title {
+    margin: 0;
+    width: 200px;
+    float: right;
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+
+.topic-title strong {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.topic-description em {
+    font-style: normal;
+}
+
+.topic-description a {
+    color: rgb(71, 73, 75);
+    text-decoration:none;
+}
+
+.topic-description a:hover {
+    color: rgb(169, 209, 206);
+}
+
+
+#support {
+    padding: 30px;
+    margin-top: 20px;
+    background-color: rgb(244, 218, 163);
+}
+
+#support-content {
+    max-width: 660px;
+    float: left;
+}
+
+#support-title {
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgb(233, 207, 151);
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+
+#support-button {
+    padding: 15px 30px;
+    background-color: rgb(233, 207, 151);
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(205, 181, 129);
+    border-radius: 5px;
+    width: 250px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
+    margin-left: 315px;
+
+}
+
+
+#support-icon {
+    float: right;
+    margin : 50px 50px 0 0 ;
+}
+
+#footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: rgb(232, 210, 148);
+    background-color: white;
+}
+
+
+
+@media all and (max-width: 824px) {
+    #header-title {
+        font-size: 1em;
+    }
+
+    #header-title > a > strong {
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+
+    #slogan-title {
+        margin: 0;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        line-height: 1.2;
+        font-weight: normal;
+    }
+
+    #slogan-title strong {
+        font-size: 1.1em;
+        /* la taille en 'em' est relative à la taille déjà en cours 
+    (cad la taille parent, en l'occurrence, la taille parent est : 2.3em */
+    }
+
+
+
+    #support {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(244, 218, 163);
+    }
+
+    #support-content {
+        max-width: 480px;
+        float: left;
+    }
+
+    #support-title {
+        color: rgb(255, 255, 255);
+        padding-bottom: 5px;
+        border-bottom: 2px solid rgb(233, 207, 151);
+        text-transform: uppercase;
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+
+    #support-button {
+        padding: 7px 15px;
+        background-color: rgb(233, 207, 151);
+        color: rgb(255, 255, 255);
+        border-bottom: 5px solid rgb(205, 181, 129);
+        border-radius: 3px;
+        width: 175px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1em;
+        margin-left: 120px;
+
+    }
+
+
+    #support-icon {
+        float: right;
+        margin : 20px 20px 0 0 ;
+    }
+
+}
+
+
+/* OPTIMISATION POUR L'IMPRESSION */
+
+@media print {
+
+    #header-nav,
+    #sidebar,
+    #footer {
+        display: none;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    html > /**/ body * {
+        color: rgb(0, 0, 0) !important;
+        background: none !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto;
+        page-break-inside: avoid;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
